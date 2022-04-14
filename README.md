@@ -12,7 +12,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/Jeremy-Polanco/Jobs-Web-App">
+    <a href="https://devchallenges.io/solutions/WGRByjgDN4tIsddbNazO">
       Solution
     </a>
     <span> | </span>

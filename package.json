@@ -19,5 +19,18 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.7",
     "vite": "^2.9.0"
-  }
+  },
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jeremy-Polanco/Jobs-Web-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jeremy-Polanco/Jobs-Web-App/issues"
+  },
+  "homepage": "https://github.com/Jeremy-Polanco/Jobs-Web-App#readme",
+  "description": ""
 }

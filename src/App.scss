@@ -9,6 +9,7 @@
 html {
   width: 100vw;
   height: 100vh;
+  background: #f6f7fb;
 }
 
 .App {
@@ -34,6 +35,7 @@ html {
   .bg-image {
     width: 100%;
     height: 138px;
+    min-width: 321px;
     object-fit: cover;
     object-position: 50% 50%;
     position: absolute;
@@ -49,26 +51,32 @@ html {
       brightness(84%) contrast(92%);
   }
   .form-container {
-    width: 100%;
-    height: 138px;
-    display: grid;
-    justify-content: center;
+    position: absolute;
+    width: 65%;
+    height: 55px;
+    display: flex;
     align-items: center;
-  }
-  .search-input {
+    border-radius: 4px;
+    top: 70%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
     .input {
-      width: 790px;
-      height: 55px;
+      width: 100%;
+      height: 100%;
+      min-width: 273px;
       padding-left: 45px;
+      border: none;
+      outline: none;
     }
     input::placeholder {
       color: #b9bdcf;
     }
     button {
       position: relative;
-      width: 146px;
+      width: 17%;
       height: 47px;
-      right: 149px;
+      right: 2%;
       background: #1e86ff;
       font-family: "Roboto";
       font-style: normal;
@@ -112,7 +120,8 @@ html {
   }
 
   .search-location {
-    width: 379px;
+    width: 300%;
+    max-width: 400px;
     height: 48px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
     border-radius: 4px;
@@ -168,11 +177,15 @@ html {
   gap: 32px;
   position: absolute;
   left: 34%;
+  width: 80%;
+  align-items: center;
 }
 
 .job {
+  position: relative;
   display: flex;
-  width: 790px;
+  width: 65%;
+  margin-right: 25%;
   height: 114px;
   background: #ffffff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
@@ -194,7 +207,6 @@ html {
       top: 26px;
       margin-right: auto;
       font-weight: bold;
-      margin-top: 45px;
     }
     .position {
       font-style: normal;
@@ -220,10 +232,11 @@ html {
   .extra-info {
     display: flex;
     flex-direction: row;
-    position: relative;
+    position: absolute;
     bottom: 54px;
-    left: 435px;
+    left: 66%;
     gap: 28.5px;
+    top: 71%;
     .earth-icon {
       width: 15px;
       height: 15px;
@@ -493,4 +506,105 @@ html {
 
 .app-desc {
   position: absolute;
+}
+@media (max-width: 340px) {
+  .header {
+    .form-container {
+      width: 92%;
+      left: 52%;
+      width: 50%;
+      button {
+        width: auto;
+        right: 24% !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .App {
+    padding: 0;
+    margin-left: 20px;
+    .aside {
+      width: 50%;
+    }
+  }
+  .job-list {
+    display: block;
+  }
+  .header {
+    .work-bag-icon {
+      position: absolute;
+      left: 3%;
+    }
+    .form-container {
+      width: 92%;
+      left: 52%;
+
+      .input {
+        padding-left: 36px;
+        right: 21%;
+      }
+      button {
+        width: auto;
+        right: 9%;
+      }
+    }
+  }
+  .job-container {
+    left: auto;
+    align-items: baseline;
+    gap: 23px;
+    width: 100%;
+    position: relative;
+    margin-top: 23px;
+    .job {
+      width: 100%;
+      gap: 28px;
+      height: 147px;
+      .job-info {
+        height: auto;
+      }
+      .extra-info {
+        top: 66%;
+      }
+    }
+  }
+  .pagination {
+    left: auto;
+  }
+  .flex-wrapper {
+    flex-direction: column;
+    .job-desc-header {
+      width: auto;
+      .applying-guide {
+        width: 264px;
+      }
+    }
+    .job-description {
+      margin: 0;
+      width: 90%;
+      .job-title {
+        display: block;
+        width: 142%;
+        .time-post {
+          position: relative;
+          margin: 0;
+        }
+        .schedule {
+          margin-left: 0;
+          span {
+            right: -8%;
+          }
+        }
+      }
+      .job-info {
+        width: 100%;
+      }
+    }
+  }
+  .footer-job-desc {
+    right: -5%;
+    width: 100%;
+  }
 }

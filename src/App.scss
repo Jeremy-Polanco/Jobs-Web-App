@@ -1,0 +1,496 @@
+@import "./index.scss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+.App {
+  padding: 32px 120px 0px 120px;
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.header {
+  position: relative;
+  font-family: $title-font;
+  h1 {
+    color: $app-title-color;
+
+    span {
+      font-weight: 300;
+    }
+  }
+  .job-search {
+    height: 138px;
+  }
+
+  .bg-image {
+    width: 100%;
+    height: 138px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    position: absolute;
+    z-index: -1;
+  }
+  .work-bag-icon {
+    width: 15px;
+    height: 14.25px;
+    position: relative;
+    vertical-align: middle;
+    left: 43px;
+    filter: invert(93%) sepia(7%) saturate(1401%) hue-rotate(189deg)
+      brightness(84%) contrast(92%);
+  }
+  .form-container {
+    width: 100%;
+    height: 138px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+  .search-input {
+    .input {
+      width: 790px;
+      height: 55px;
+      padding-left: 45px;
+    }
+    input::placeholder {
+      color: #b9bdcf;
+    }
+    button {
+      position: relative;
+      width: 146px;
+      height: 47px;
+      right: 149px;
+      background: #1e86ff;
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      color: #e7e7eb;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.aside {
+  width: 30%;
+  margin-top: 40px;
+  input {
+    width: 18px;
+    height: 18px;
+    position: relative;
+    top: 5px;
+  }
+  .full-time-label {
+    font-family: $title-font;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #334680;
+    padding-left: 12px;
+  }
+
+  .search-label {
+    font-family: $title-font;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #b9bdcf;
+    margin-top: 30px;
+  }
+
+  .search-location {
+    width: 379px;
+    height: 48px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    border: 3px solid #ffffff;
+  }
+  .earth-icon {
+    width: 15px;
+    height: 15px;
+    fill: #b9bdcf;
+    vertical-align: middle;
+    position: relative;
+    left: 2px;
+    top: 35px;
+    z-index: 10;
+  }
+  .search-location {
+    padding-left: 40px;
+    right: 16px;
+  }
+  input::placeholder {
+    color: #b9bdcf;
+  }
+  .location-filter {
+    margin-top: 24.5px;
+    display: flex;
+    flex-direction: column;
+    gap: 15.67px;
+    input {
+      border-radius: 33px;
+      width: 18px;
+      height: 18px;
+    }
+    label {
+      font-family: $title-font;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+      color: #334680;
+    }
+  }
+}
+
+.job-list {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-auto-rows: auto;
+}
+
+.job-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 42px;
+  gap: 32px;
+  position: absolute;
+  left: 34%;
+}
+
+.job {
+  display: flex;
+  width: 790px;
+  height: 114px;
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  gap: 32px;
+  font-family: "Roboto";
+  font-size: 12px;
+  color: #334680;
+  cursor: pointer;
+  .job-info {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 114px;
+    gap: 8px;
+    .job-title {
+      position: relative;
+      top: 26px;
+      margin-right: auto;
+      font-weight: bold;
+      margin-top: 45px;
+    }
+    .position {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+    }
+    .schedule {
+      position: relative;
+      bottom: 20px;
+      margin-right: auto;
+      font-weight: bold;
+    }
+  }
+
+  .job-logo {
+    width: 90px;
+    height: 90px;
+    align-self: center;
+    margin-left: 12px;
+    margin-right: -17px;
+  }
+  .extra-info {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    bottom: 54px;
+    left: 435px;
+    gap: 28.5px;
+    .earth-icon {
+      width: 15px;
+      height: 15px;
+      fill: #b9bdcf;
+      vertical-align: middle;
+      position: relative;
+      bottom: 0.5px;
+      right: 7.5px;
+    }
+    .clock-icon {
+      font-size: 18px;
+      color: #b9bdcf;
+      vertical-align: middle;
+      position: relative;
+      right: 7.5px;
+    }
+    .time-post {
+      margin-bottom: 2px;
+      height: 36px;
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  position: relative;
+  left: 64%;
+  .prev-arrow {
+    .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .next-arrow {
+    .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .ellipsis-icon {
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    position: relative;
+    .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .page {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #b7bcce;
+    box-sizing: border-box;
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .page:hover {
+    border: 1px solid #1e86ff;
+    color: #1e86ff;
+    cursor: pointer;
+  }
+  .active {
+    background: #1e86ff;
+    color: #ffffff;
+  }
+  .active:hover {
+    color: #ffffff;
+  }
+}
+
+.footer {
+  position: relative;
+  text-align: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #b9bdcf;
+  top: 458px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .username {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #b9bdcf;
+  }
+}
+
+.flex-wrapper {
+  display: flex;
+}
+
+.job-desc-header {
+  width: 20%;
+  h1 {
+    color: $app-title-color;
+    span {
+      font-weight: 300;
+    }
+  }
+  .nav-back-btn {
+    font-family: $title-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    text-decoration: none;
+    color: #1e86ff;
+  }
+  .how-apply {
+    font-family: $title-font;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #b9bdcf;
+    margin-top: 30px;
+  }
+
+  .applying-guide {
+    width: 201px;
+    height: 84px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+
+    color: #334680;
+  }
+  a {
+    text-decoration: none;
+    color: #1e86ff;
+  }
+}
+
+.job-description {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 80px;
+  margin-top: 58px;
+  .job-title {
+    display: flex;
+    color: #334680;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: $title-font;
+    .schedule {
+      position: relative;
+      bottom: 10px;
+      width: 63px;
+      height: 26px;
+      margin-left: 10px;
+      border: 1px solid #334680;
+      box-sizing: border-box;
+      border-radius: 4px;
+      font-family: "Roboto";
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 14px;
+      color: #334680;
+      span {
+        position: relative;
+        top: 22%;
+        right: -11%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .time-post {
+      position: absolute;
+      margin-top: 36px;
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      color: #b7bcce;
+    }
+  }
+  .company {
+    display: flex;
+    gap: 12px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #334680;
+    .job-logo {
+      width: 42px;
+      height: 42px;
+    }
+
+    .location {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      .country {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: #b9bdcf;
+        gap: 7.5px;
+        display: flex;
+        .earth-icon {
+          width: 15px;
+          height: 15px;
+          fill: #b9bdcf;
+          vertical-align: middle;
+          position: relative;
+        }
+      }
+    }
+  }
+  .job-info {
+    width: 80%;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #32498d;
+  }
+}
+
+.footer-job-desc {
+  position: absolute;
+  top: 102%;
+  right: 42%;
+  color: #b9bdcf;
+  text-decoration: none;
+  .username {
+    font-family: "Montserrat";
+    text-decoration: underline;
+    font-weight: bold;
+    font-style: normal;
+    color: #b9bdcf;
+  }
+}
+
+.app-desc {
+  position: absolute;
+}
